@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+
+body {
+    display : flex;
+    justify-content : center;
+    align-items : center;
+    width : 100vw;
+    height : 100vh;
+    font-size : 10px;
+
+    & > .title {
+        font-family : 'Koulen', cursive;
+        font-size : 5.0rem;
+        position : relative;
+
+        &::before {
+            content : "";
+            background : #20c8e6;
+            position : absolute;
+            inset : 0 -1rem;
+            transform : scaleX(0);
+            transform-origin : right;
+            transition : transform 1s ease-in-out;
+            z-index : -1;
+        }
+
+        &:hover::before {
+            transform : scaleX(1);
+            transform-origin : left;
+        }
+    }
+}

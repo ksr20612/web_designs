@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+@mixin selection() {
+    ::selection {
+        @content;
+    }
+    ::-moz-selection {
+        @content;
+    }
+}
+$black : #222;
+
+body {
+    font-size : 10px;
+    padding : 5vmin;
+    background-color : $black;
+    overflow-y : hidden;
+
+    & > .heading {
+        font-size : 5rem;
+        font-family : 'Anton', sans-serif;
+        background-clip : text;
+        -webkit-background-clip: text;
+        color : transparent;
+        background-image: linear-gradient(
+            70deg,
+            hsl(240deg, 97%, 56%) 0%,
+            hsl(225deg, 87%, 54%) 11%,
+            hsl(214deg, 78%, 51%) 22%,
+            hsl(204deg, 76%, 48%) 33%,
+            hsl(194deg, 76%, 44%) 44%,
+            hsl(183deg, 77%, 41%) 56%,
+            hsl(171deg, 80%, 42%) 67%,
+            hsl(161deg, 84%, 44%) 78%,
+            hsl(152deg, 88%, 46%) 89%,
+            hsl(144deg, 93%, 48%) 100%
+        );
+
+        @include selection() {
+            background : #fff;
+            color : $black;
+        }
+    }    
+}

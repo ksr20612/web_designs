@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+body {
+  font-size: 10px;
+  padding: 5vmin;
+  background-color: #222;
+  overflow-y: hidden;
+}
+
+body > .heading {
+  font-size: 5rem;
+  font-family: 'Anton', sans-serif;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(70deg, #2222fc 0%, #2457f0 11%, #2175e4 22%, #1d8dd7 33%, #1b9ec5 44%, #18b1b9 56%, #15c1a7 67%, #12ce93 78%, #0edd7c 89%, #09ec64 100%);
+}
+
+body > .heading ::-moz-selection {
+  background: #fff;
+  color: #222;
+}
+
+body > .heading ::selection {
+  background: #fff;
+  color: #222;
+}
+
+body > .heading ::-moz-selection {
+  background: #fff;
+  color: #222;
+}

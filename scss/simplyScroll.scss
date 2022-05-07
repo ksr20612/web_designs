@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+KR:wght@500&display=swap');
+
+$theme_main : #d44c3f;
+$theme_sub : #333;
+
+body {
+    display : flex;
+    width : 100vw;
+    height : 100vh;
+    font-size : 10px;
+
+    & > .box {
+        width : 100%;
+        background-color : #fff;
+
+        & > .heading {
+            font-family: 'Black Han Sans', sans-serif;
+            color : $theme_sub;
+            font-size : 5rem;
+        }
+
+        & > .scroll > li {
+            font-family: 'Noto Sans KR', sans-serif;
+            font-size : 3rem;
+            display : inline-block;
+            position : relative;
+            padding : 1rem;
+            border-radius : 1rem;
+            z-index : 1;
+
+            &::after {
+                content : "";
+                position : absolute;
+                border : 0.5rem solid $theme_main;
+                border-radius : 1rem;
+            }
+
+            // 우측 위에 점 표시
+            // &::after {
+            //     content : "";
+            //     position : absolute;
+            //     border : 0.5rem solid $theme_main;
+            //     border-radius : 1rem;
+            // }
+
+        }
+
+    }
+}
