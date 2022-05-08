@@ -1,3 +1,7 @@
-document.addEventListener("DOMContentLoaded",()=>{
-    console.log("ready");
+$(function(){
+    $("#scroller").simplyScroll();
+
+    $("#scroller").simplyScroll({
+        direction : "backwards",
+    })
 })

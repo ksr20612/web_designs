@@ -7,12 +7,13 @@
     <title>SIMPLY SCROLL</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/simplyScroll.css">
-    <script src="./js/simplyScroll.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./js/simplyScroll.min.js"></script>
 </head>
 <body>
     <article class="box">
         <h1 class="heading">2022년 당신의 책장.</h1>
-        <ul class="scroll scroll--right">
+        <ul id="scroller" class="scroll">
             <li>📊 러닝 리액트</li>
             <li>🎨 CSS 설계 실전 가이드</li>
             <li>📦 모던 자바스크립트 입문</li>
@@ -22,7 +23,7 @@
             <li>✨ 모던 자바스크립트 Deep Dive</li>
             <li>👏 그림으로 배우는 Http & Network Basic</li>
         </ul>
-        <ul class="scroll scroll--left">
+        <ul id="scroller--left" class="scroll">
             <li>🍪 모던 리눅스 관리</li>
             <li>🔥 Node.js 교과서</li>
             <li>🌸 Mastering GO</li>
@@ -33,5 +34,6 @@
             <li>👀 자바스크립트 자료 구조와 알고리즘</li>
         </ul>
     </article>
+    <script src="./js/simplyScroll.js"></script>
 </body>
 </html>
