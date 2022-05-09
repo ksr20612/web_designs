@@ -1,0 +1,93 @@
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100vw;
+  height: 100vh;
+  font-size: 80px;
+}
+
+body > .word {
+  position: relative;
+}
+
+body > .word:not(.word--eng)::after {
+  content: "|";
+  position: absolute;
+  color: #555;
+  -webkit-animation-name: blink;
+          animation-name: blink;
+  -webkit-animation-duration: 1.2s;
+          animation-duration: 1.2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: steps(2, jump-none);
+          animation-timing-function: steps(2, jump-none);
+}
+
+@-webkit-keyframes blink {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes blink {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+body > .word.word--eng {
+  width: 12ch;
+  -webkit-animation: typing 4s steps(12), blink_2 1.2s steps(2, jump-none) infinite;
+          animation: typing 4s steps(12), blink_2 1.2s steps(2, jump-none) infinite;
+  white-space: nowrap;
+  overflow: hidden;
+  font-family: monospace;
+  border-right: 5px solid #555;
+}
+
+@-webkit-keyframes typing {
+  from {
+    width: 0ch;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0ch;
+  }
+}
+
+@-webkit-keyframes blink_2 {
+  from {
+    border-color: #555;
+  }
+  to {
+    border-color: transparent;
+  }
+}
+
+@keyframes blink_2 {
+  from {
+    border-color: #555;
+  }
+  to {
+    border-color: transparent;
+  }
+}
